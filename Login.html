@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        .d{
+            max-width: 500px;
+
+        }
+        #forform,#lognform{
+           display: none;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container-fluid d">
+        <div class="row ">
+            <div class="col-sm4 mx-auto p-5 bg-info mt-5 fs-4">
+                <a href="#" class="btn btn-success" onclick="demo2()">Register</a>
+                <a href="#" class="btn btn-success float-end" onclick="demo1()">Login</a>
+                <form id="regform">
+                         Name<input type="text" placeholder="Enter Your Name" class="form-control">
+                         Email<input type="email" placeholder="Enter Your Email" class="form-control">
+                         Password<input type="password" placeholder="Enter Your Password" class="form-control">
+                         Mobile<input type="number" placeholder="Enter Your Mobile number" class="form-control">
+                </form>
+                <form id="lognform">
+                         Username<input type="email" class="form-control">
+                         Password<input type="password" class="form-control">
+                         <input type="submit" class="btn btn-dark mt-2" onclick="demo3()" value="Login"/>
+                         <a href="#" class="fs-5">Forget Password</a>
+                    </form>
+                    <form id="forform">
+                        <input type="text" class="form-control mt-2">
+                        <input type="submit"  value="Sent OTP" class=" btn btn-dark mt-2">
+                  </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rform=document.querySelector("#regform")
+        var lform=document.querySelector("#lognform")
+        var fform=document.querySelector("#forform")
+        function demo1(){
+        
+        lform.style.display="block";
+        rform.style.display="none"
+        fform.style.display="none"
+
+        }
+        function demo2(){
+         rform.style.display="block";
+         lform.style.display="none"
+         fform.style.display="none"
+        }
+        function demo3(){
+         fform.style.display="block";
+         lform.style.display="none"
+         rform.style.display="none"
+        }
+    </script>
+</body>
+</html>
